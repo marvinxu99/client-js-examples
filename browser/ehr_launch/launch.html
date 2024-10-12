@@ -9,6 +9,7 @@
     </head>
     <body>
         <script>
+         window.onload = function() {
           var url = new URL(location.href);
           if (!url.searchParams.has("launch") || !url.searchParams.has("iss")) {
             url.searchParams.set("launch", "eyJhIjoiMSIsImciOiIxIn0");
@@ -37,6 +38,7 @@
               redirectUri: "index.html"
             });
           }
+         }
         </script>
     </body>
 </html>
