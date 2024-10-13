@@ -28,9 +28,16 @@
         </div>
         <script type="text/javascript">
             FHIR.oauth2.ready().then(function(client) {
-                var app = new App(client);
-                app.renderContext();
-                app.request("metadata");
+                
+                client.request("Patient/12724065").then(function(patient) {
+                    // Handle the list of patients, or present a patient picker to the user
+                    console.log(patient);
+                });
+
+                // var app = new App(client);
+                // app.renderContext();
+                // app.request("metadata");
+
             }).catch(createRenderer("output"));
         </script>
     </body>
