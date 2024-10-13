@@ -24,12 +24,13 @@
               clientId: "ae215ada-e41c-4f44-afa6-a3d502c31299",
 
               // The scopes that you request from the EHR
-              scope: [
-                "launch",           // Get the launch context in EHR launch mode
-                "openid fhirUser",  // Get the current user
-                "patient/*.read",   // Read patient data
-                "online_access openid profile"
-              ].join(" "),
+              // scope: [
+              //   "launch",           // Get the launch context in EHR launch mode
+              //   "openid fhirUser",  // Get the current user
+              //   "patient/*.read",   // Read patient data
+              //   "online_access openid profile"
+              // ].join(" "),
+              scope: 'patient/Patient.read patient/Observation.read launch online_access openid profile'
 
               // Typically, if your redirectUri points to the root of the current directory
               // (where the launchUri is), you can omit this option because the default
