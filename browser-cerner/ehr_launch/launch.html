@@ -28,6 +28,7 @@
                 "launch",           // Get the launch context in EHR launch mode
                 "openid fhirUser",  // Get the current user
                 "patient/*.read",   // Read patient data
+                "online_access openid profile"
               ].join(" "),
 
               // Typically, if your redirectUri points to the root of the current directory
@@ -35,7 +36,7 @@
               // value is ".". However, some servers (like this one) do not support directory
               // indexes so "." and "./" will not automatically map to the "index.html" file
               // in that directory.
-              redirectUri: "index.html"
+              // redirectUri: "index.html"
             });
           }
         }
