@@ -13,7 +13,7 @@
 
                 // The client_id that you should have obtained after registering a client at
                 // the EHR.
-                clientId: "my_web_app",
+                clientId: "22596852-fef5-4a27-bee8-56742ae691ba",     
 
                 // The scopes that you request from the EHR
                 scope: [
@@ -21,7 +21,8 @@
                     "launch/patient",   // Get the current patient in standalone launch mode
                     "launch/encounter", // Get the current encounter in standalone launch mode
                     "openid fhirUser",  // Get the current user
-                    "patient/*.read"    // Read patient data
+                    "patient/*.read",   // Read patient data
+                    "online_access profile"
                  ].join(" "),
 
                 // Having this option means that it makes a standalone launch. This is to make
