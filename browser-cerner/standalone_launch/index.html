@@ -29,9 +29,16 @@
         <script type="text/javascript">
             FHIR.oauth2.ready().then(function(client) {
                 
+                // client.request("Patient/12724065").then(function(patient) {
+                //     // Handle the list of patients, or present a patient picker to the user
+                //     console.log(patient);
+                // });
+
+                // Fetch and render a specific patient by ID
                 client.request("Patient/12724065").then(function(patient) {
-                    // Handle the list of patients, or present a patient picker to the user
-                    console.log(patient);
+                    document.getElementById("patient").textContent = JSON.stringify(patient, null, 2);
+                }).catch(function(error) {
+                    document.getElementById("patient").textContent = "Error loading patient: " + error;
                 });
 
                 // var app = new App(client);
