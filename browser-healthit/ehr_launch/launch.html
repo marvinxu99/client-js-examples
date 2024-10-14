@@ -27,8 +27,14 @@
             //   "online_access openid profile"
             // ].join(" "),
             scope: [
-              'launch openid fhirUser profile',
-              'patient/Patient.read patient/Encounter.read patient/Practitioner.read',
+              'launch', 
+              'openid', 
+              'fhirUser', 
+              'profile', 
+              'launch/patient', 
+              'patient/Patient.read', 
+              'patient/Encounter.read', 
+              'patient/Practitioner.read',
               'user/*.read'
             ].join(' '),
 
@@ -37,7 +43,7 @@
             // value is ".". However, some servers (like this one) do not support directory
             // indexes so "." and "./" will not automatically map to the "index.html" file
             // in that directory.
-            // redirectUri: "index.html"
+            redirectUri: "index.html"
           });
         }
 
