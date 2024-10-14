@@ -27,9 +27,9 @@
             //   "online_access openid profile"
             // ].join(" "),
             scope: [
-              'launch openid fhirUser profile launch/patient',
-              'patient/*.*',
-              'user/*.*'
+              'launch openid fhirUser profile',
+              'patient/Patient.read patient/Encounter.read patient/Practitioner.read',
+              'user/*.read'
             ].join(' '),
 
             // Typically, if your redirectUri points to the root of the current directory
